@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hello Alt Net!"
+title:  "Hello Alt Net!2"
 date:   2018-03-04 01:27:06 -0600
 categories: jekyll update
 ---

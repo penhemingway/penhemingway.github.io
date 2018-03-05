@@ -3,11 +3,14 @@ version: '3'
 services:
   jekyll: 
     image: jekyll/jekyll
-    container_name: altnet-com
+    container_name: penhemingway.github.io 
     environment:
         - JEKYLL_ENV=docker
-    command: jekyll serve --config _config.yml,_config.docker.yml --force_polling 
+    # force_polling makes the linux box watch for any changes to files, then it will regenerate
+    # livereload gets the browser to automatically refresh when changes happen to file
+    command: jekyll serve --force_polling --livereload
     ports:
         - 4000:4000
+        - 35729:35729
     volumes:
         - ./:/srv/jekyll
