@@ -38,7 +38,7 @@ defaults:
       type: "posts"
     values:
       # the default layout to use if none is specified
-      layout: "post"
+      layout: post
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
