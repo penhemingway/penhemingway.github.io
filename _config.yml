@@ -1,46 +1,65 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Pens! 
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
-respository: penhemingway/penhemingway.github.io
+title: Jekyll Basics
+email: info@wiredcraft.com
+description: "A boilerplate set up to create a bilingual Jekyll website."
+keywords:
+- Jekyll
 
+# URL
+url: "https://wiredcraft.github.io/jekyll-basics"
+baseurl: ""
+
+# Google tracking (Analytics and Google Tag Manager)
+# google_tag_manager: GTM-XXXXXX
+# google_analytics: UA-XXXXXXX-X
+
+# SEO
+twitter: wiredcraft
+facebook: https://www.facebook.com/teamwiredcraft
+logo: /assets/logo.png
+image: /assets/logo.png
+social:
+  - https://www.facebook.com/teamwiredcraft
+  - https://twitter.com/wiredcraft
+  - https://www.linkedin.com/company/wiredcraft
+  - https://github.com/wiredcraft
+  - https://weibo.com/1970385015/
+
+# Sitemap (see sitemap.xml)
+sitemap:
+  changefreq: weekly
 
 # Build settings
-markdown: kramdown
-# theme: minima
-plugins:
-  - jekyll-feed
-  - jekyll-github-metadata
+exclude: ['README.md', 'Makefile']
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Collections
+permalink: /:categories/:title/
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      class: post
+  - scope:
+      path: ""
+      type: drafts
+    values:
+      layout: post
+      class: post
+
+# Plugins
+plugins:
+- jekyll-sitemap
+
+# Multiligual
+lang:
+  - en
+  - fr
+  - zh
+
+# Version (helps with force reloading assets)
+version: sparkle
+
+# Jekyll+ (not useful if you're running on GitHub pages)
+# jekyllplus: Wiredcraft/jekyll-basics/master

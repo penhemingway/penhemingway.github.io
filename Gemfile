@@ -8,7 +8,8 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-# gem "jekyll", "~> 3.8.6"
+#gem "jekyll", "~> 3.7.3"
+#gem "jekyll", "~> 3.8"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 # gem "minima", "~> 2.0"
@@ -18,19 +19,23 @@ source "https://rubygems.org"
 gem "github-pages", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
-group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
-  gem "jekyll-seo-tag"
-  gem "jekyll-github-metadata"
-end
+# Not sure whether we need these as using github-pages which which has these (?) as dependencies
+# group :jekyll_plugins do
+#     gem "jekyll-feed", "~> 0.6"
+#     gem "jekyll-sitemap"
+#     gem 'jekyll-seo-tag'
+#     gem 'jemoji'
+#     gem "jekyll-github-metadata"
+# end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-# and associated library.
-install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
-  gem "tzinfo", "~> 1.2"
-  gem "tzinfo-data"
-end
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1.0", :install_if => Gem.win_platform?
+gem "wdm", "~> 0.1.0" if Gem.win_platform?
+
+
+
 
