@@ -53,13 +53,13 @@ plugins:
 - jekyll-sitemap
 
 # Multiligual
-lang:
-  - en
-  - fr
-  - zh
+# lang:
+#   - en
+#   - fr
+#   - zh
 
 # Version (helps with force reloading assets)
-version: sparkle
+# version: sparkle
 
 # Jekyll+ (not useful if you're running on GitHub pages)
 # jekyllplus: Wiredcraft/jekyll-basics/master
